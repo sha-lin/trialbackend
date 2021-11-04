@@ -3,8 +3,9 @@ import datetime as dt
 from django.urls import reverse
 from url_or_relative_url_field.fields import URLOrRelativeURLField
 
+
 # cloudinary
-from cloudinary.models import CloudinaryField
+
 from django.contrib.auth.models import User
 
 
@@ -20,7 +21,6 @@ class Product(models.Model):
     title = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=12, decimal_places=2)
     description = models.TextField()
-    image = CloudinaryField('image')
     link = URLOrRelativeURLField(max_length=200)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='products', null=True)
