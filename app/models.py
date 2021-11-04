@@ -39,7 +39,7 @@ class Product(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
-    profile_pic = CloudinaryField('image')
+    # profile_pic = CloudinaryField('image')
     contact = models.CharField(max_length=100, blank=True)
     location = models.CharField(max_length=100, blank=True)
     

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Profile,Product
 # cloudinary
-from cloudinary.models import CloudinaryField
+# from cloudinary.models import CloudinaryField
 # user
 from django.contrib.auth.models import User
 
