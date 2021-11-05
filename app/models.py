@@ -1,7 +1,7 @@
 from django.db import models
 import datetime as dt
 from django.urls import reverse
-from url_or_relative_url_field.fields import URLOrRelativeURLField
+# from url_or_relative_url_field.fields import URLOrRelativeURLField
 
 
 # cloudinary
@@ -21,7 +21,8 @@ class Product(models.Model):
     title = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=12, decimal_places=2)
     description = models.TextField()
-    link = URLOrRelativeURLField(max_length=200)
+    image = models.TextField()
+    # link = URLOrRelativeURLField(max_length=200)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='products', null=True)
     users = models.ManyToManyField(User, through='Cart')
