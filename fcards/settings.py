@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-# import django_heroku
-# import dj_database_url
-# from decouple import config,Csv
+import django_heroku
 
 # cloudinary
 # import cloudinary
@@ -34,7 +32,7 @@ SECRET_KEY = 'django-insecure-j6^po782r+x-(%tcg%immo1^x%283wqpa+1##e)3t%%+-@=0o@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','storey7.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -169,4 +167,4 @@ EMAIL_HOST_PASSWORD = 'Chepkoech1234'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL='index'
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
